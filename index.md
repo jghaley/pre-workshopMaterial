@@ -4,7 +4,7 @@ title: Pre-Workshop Material
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-Welcome to the US ATLAS/First-HEP computing bootcamp! The aim of this week is to give you
+Welcome to the 2021 US ATLAS computing bootcamp! The aim of this week is to give you
 an understanding of fundamental tools and techniques in computing that will be using throughout
 your time in ATLAS, and more broadly, particle physics.  However, from the get-go you should appreciate
 that the skills you will learn here are applicable beyond your career in physics and are used
