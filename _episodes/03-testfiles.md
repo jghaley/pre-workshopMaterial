@@ -42,15 +42,16 @@ but it will contain different information and hopefully be smaller in size.
 We will be working with events from a DAOD ROOT file that was initially produced to study the decays of Higgs to b-quarks.
 The verbose name of the dataset container is
 >```
->mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_e5984_s3126_r10201_r10210_p4432
+>mc16_13TeV:mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_e5984_s3126_r10201_r10210_p4432
 >```
 
 > ## Condensed Information
 > From this long name, you can extract quite a bit of information about its origin :
+> - `mc16_13TeV:` : The part before the colon is the scope string, and is primarily to help separate centrally created data from individual user data. (https://rucio.readthedocs.io/en/latest/overview_File_Dataset_Container.html)
 > - `mc16_13TeV` : Production campaign and center of mass energy
 > - `345055` : The **D**ata **S**et **ID**entifier of the container.  The technical details can be found by looking at the jobOptions - [pmg/infrastructure/mc15joboptions](https://gitlab.cern.ch/atlas-physics/pmg/infrastructure/mc15joboptions/tree/master/share)
 > - `PowhegPythia8...LO_llbb_VpT` : Verbose "short" name for the dataset from which you can guess some things - but its best to always look at the production jobOptions directly.
-> - `e5706_s3126_r10724_p3840` : Production and reconstruction tags - [What do all these letters and numbers mean?](https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasProductionGroup#FAQ). The central source for browsing the details of what these tags precisely mean is the [ATLAS Metadata Interface (AMI)](https://ami.in2p3.fr/).
+> - `e5706_e5984_s3126_r10201_r10210_p4432` : Production and reconstruction tags - [What do all these letters and numbers mean?](https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasProductionGroup#FAQ). The central source for browsing the details of what these tags precisely mean is the [ATLAS Metadata Interface (AMI)](https://ami.in2p3.fr/).
 >
 > Unfortunately, the files contained within this container are not so verbosely named and take the form of something like `DAOD_EXOT27.17882744._000026.pool.root.1` which allows for more automated and robust record keeping, even if it is not as human-readable.
 {: .callout}
