@@ -50,7 +50,7 @@ use these tools so that they are no longer black boxes and you are not "just fol
 <br>
 <div class="text-center">
   <a href="https://jghaley.github.io/usatlas-computing-bootcamp-2021/">
-    <button type="button" class="btn btn-info" style="font-size:large;text-align:center">US ATLAS Computing Bootcamp 2020</button>
+    <button type="button" class="btn btn-info" style="font-size:large;text-align:center">US ATLAS Computing Bootcamp 2021</button>
   </a>
 </div>
 
