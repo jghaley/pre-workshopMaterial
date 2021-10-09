@@ -42,7 +42,7 @@ but it will contain different information and hopefully be smaller in size.
 We will be working with events from a DAOD ROOT file that was initially produced to study the decays of Higgs to b-quarks.
 The verbose name of the dataset container is
 >```
->mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_s3126_r10724_p3840
+>mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_e5984_s3126_r10201_r10210_p4432
 >```
 
 > ## Condensed Information
