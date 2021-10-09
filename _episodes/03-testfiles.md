@@ -53,15 +53,15 @@ The verbose name of the dataset container is
 > - `PowhegPythia8...LO_llbb_VpT` : Verbose "short" name for the dataset from which you can guess some things - but its best to always look at the production jobOptions directly.
 > - `e5706_e5984_s3126_r10201_r10210_p4432` : Production and reconstruction tags - [What do all these letters and numbers mean?](https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasProductionGroup#FAQ). The central source for browsing the details of what these tags precisely mean is the [ATLAS Metadata Interface (AMI)](https://ami.in2p3.fr/).
 >
-> Unfortunately, the files contained within this container are not so verbosely named and take the form of something like `DAOD_EXOT27.17882744._000026.pool.root.1` which allows for more automated and robust record keeping, even if it is not as human-readable.
+> Unfortunately, the files contained within this container are not so verbosely named and take the form of something like `DAOD_EXOT27.24604725._000013.pool.root.1` which allows for more automated and robust record keeping, even if it is not as human-readable.
 {: .callout}
 
 To allow for reproducibility of results and compatibility among all of the participants at the bootcamp, a single one of the files from this
 container has been extracted and placed on the [CERNBox](https://cernbox.cern.ch). Please download this file and place it somewhere in the
-directory that you will be using for the bootcamp. It is quite large so don't worry if it takes some time (2.7GB).
+directory that you will be using for the bootcamp. It is quite large so don't worry if it takes some time (2.4GB).
 <center>
 <font size="10">
-<a href="https://cernbox.cern.ch/index.php/s/YXbCrQkwnZuc3yU">Link to Download File</a>
+<a href="https://cernbox.cern.ch/index.php/s/P63wXuqszBDpycX">Link to Download File</a>
 </font>
 </center>
 
@@ -85,7 +85,7 @@ directory that you will be using for the bootcamp. It is quite large so don't wo
 > this should be as easy as.
 >
 >```bash
-> rucio get --nrandom 1 mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_s3126_r10724_p3840
+> rucio get --nrandom 1 mc16_13TeV:mc16_13TeV.345055.PowhegPythia8EvtGen_NNPDF3_AZNLO_ZH125J_MINLO_llbb_VpT.deriv.DAOD_EXOT27.e5706_e5984_s3126_r10201_r10210_p4432
 >```
 > If you do this, you may not get the same file as the one in the [CERNBox](https://cernbox.cern.ch) space above, but within statistical
 > uncertainties, the events are the same.
@@ -114,7 +114,7 @@ Open the file in the ROOT interpreter (**NOTE** : You may need to use the `-b` o
 here if your `DISPLAY` is not configured.)
 
 ~~~bash
-root -b DAOD_EXOT27.17882744._000026.pool.root.1
+root -b DAOD_EXOT27.24604725._000013.pool.root.1
 ~~~
 
 ~~~
@@ -147,8 +147,8 @@ root [1] _file0->ls()
 ~~~
 
 ~~~
-TFile**		DAOD_EXOT27.17882744._000026.pool.root.1
- TFile*		DAOD_EXOT27.17882744._000026.pool.root.1
+TFile**		DAOD_EXOT27.24604725._000013.pool.root.1
+ TFile*		DAOD_EXOT27.24604725._000013.pool.root.1
   KEY: TTree	MetaData;2	MetaData
   ...
   ...
@@ -196,7 +196,7 @@ root [2] CollectionTree->Print()
 {: .output}
 
 OOF-DA!  Now that is a lot of branches and that is a lot of information to look at.
-How much space do all of these things take.  Why is this file 2.7 Gb in size?
+How much space do all of these things take.  Why is this file 2.4 Gb in size?
 How can we easily find out this information?  For that, we turn to the set
 of scripts that are packaged with the release.
 
@@ -217,7 +217,7 @@ to allow yourself to not have to copy and paste each time.).
 Once you are inside your image and you have setup your release, the `checkxAOD.py` executable should now be available to you. Execute the `checkxAOD.py` script with the path to your xAOD file as the first argument.
 
 ~~~bash
-checkxAOD.py Data/DAOD_EXOT27.17882744._000026.pool.root.1
+checkxAOD.py Data/DAOD_EXOT27.24604725._000013.pool.root.1
 ~~~
 
 This will show a considerable amount of detailed information about the contents of the xAOD, in terms
