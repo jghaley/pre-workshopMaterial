@@ -9,7 +9,8 @@ Throughout this workshop we will assuming previous knowledge in Unix, Python, C+
 It is not necessary for you to be an expert but it would be beneficial to have some experience and to feel comfortable working with them.
 
 > ## Prerequisite Checklist
-> - Unix and the Terminal : Review and understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/shell-novice/).
+
+> - Unix and the Terminal :Download this file [shell-lesson-data.zip ](https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip), create a directory named "Desktop" on your home area in the UChicago Analysis Facility, and upload there the file you downloaded. Then Review and understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/shell-novice/). (Don't worry if you don't see directories like: "Aplicacions", "Download", "Movies", "Pictures", etc while going through this tutorial, you just need the "Desktop" directory that you just created.)
 > - Essential C++ : Ensure you understand the concepts in the "Bare Minimum" checklist.
 > - Building Code : Know the difference between compiling and linking.
 > - Python : Review and understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/python-novice-inflammation/).
