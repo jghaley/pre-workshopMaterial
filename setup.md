@@ -128,6 +128,7 @@ will make things much more clear.  A few very nice tutorials that you should rev
 > You can use this as the "bare minimum" checklist for this bootcamp and you will be expected to be familiar with these concepts throughout the bootcamp.
 >
 {: .callout}
+> ## How to submit
 >
 >```bash
 > scp file_to_submit <your_user_name>@login.af.uchicago.edu:/home/<your_user_name>/Desktop
