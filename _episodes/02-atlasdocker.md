@@ -11,8 +11,9 @@ objectives:
 keypoints:
 - A software release (e.g. `AnalysisBase`) is necessary to analyze ATLAS data.
 - You will learn much more about the details of an ATLAS release on Tuesday!
-- Docker will serve as the "portal" for all ATLAS work throughout this tutorial. It can be thought of a "virtual machine".
-- You will learn much more about Docker on Thursday!
+- The UChicago Analysis facility will serve for all ATLAS work throughout this tutorial.
+- Docker serves as a "portal" for all ATLAS work, that is to say we can do the same work as in the facility. It can be thought of a "virtual machine".
+- You will learn much more about Docker on Wednesday!
 ---
 
 ## Setting up "ATLAS"
@@ -29,16 +30,40 @@ on the second day of the workshop.  However, for now, you can view this "release
 pre-requisite to be able to write code to analyze ATLAS data (and Monte Carlo simulation!).
 
 There are a few ways to get access to this pre-compiled codebase.  For the majority of this
-workshop we will be using [Docker](https://www.docker.com/) to do this and working in an ```AnalysisBase```
-release container.  You will learn more about the details of Docker later in the week of the workshop
+workshop we will be working at the UChicago Analysis Facility to do this and working in an ```AnalysisBase```
+release container. We will also be using Docker, you will learn more about the details of Docker later in the week of the bootcamp
 and what is presented here is only the minimal setup which will allow you to work through the tutorial.
 
+## Via CVMFS
+
+ One common way to setup the analysis release is to use the [CernVM File System](https://cernvm.cern.ch/portal/filesystem)
+ which is available on nearly all clusters within the collaboration.  In this case, you use the `setupATLAS` alias command
+ to initialize the `asetup` ("_athena_(a) setup") command which is subsequently used to create the surrounding ATLAS coding environment
+ by giving you access to the precompiled base release. Type the following instructions on the command line of the facility, this would typically look something like:
+ ```bash
+ -bash-4.2$ setupATLAS
+ lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):
+  lsetup agis          ATLAS Grid Information System
+  lsetup asetup        (or asetup) to setup an Athena release
+  lsetup atlantis      Atlantis: event display
+ ...
+ -bash-4.2$ asetup AnalysisBase,21.2.186,here
+ Using AnalysisBase/21.2.186 [cmake] with platform x86_64-centos7-gcc8-opt
+   at /cvmfs/atlas.cern.ch/repo/sw/software/21.2
+ Test area: /home/jhaley/bootcamp2021
+ -bash-4.2$
+ ```
+ 
 
 
-## Installing Docker
+## Via Docker
 
 General information about Docker and details of installation can be found here: [Docker Installation](https://docs.docker.com/install/)
 Depending on the operating system you are using on the local machine, links to specific instructions on the Docker website can be found below.
+
+This is achieving precisely the same goal as what we are achieving with CVMFS in this bootcamp.  The primary benefit is that using Docker
+ allows you to comfortably use your laptop for all of your work.  So, cluster down? (No Problem!), poor internet connection? (No Problem), ...
+ you can now work all the time!
 
 
 <div id="DockerOS"> {% comment %} Start of 'DockerOS' section. {% endcomment %}
@@ -105,21 +130,21 @@ Depending on the operating system you are using on the local machine, links to s
   </div>
 </div> {% comment %} End of 'docker' section. {% endcomment %}
 
-> ## If something doesn't work
-> Docker is a standard industry tool.  The directions above should "just work".  That said, if you spend **one hour** working
-> by yourself and still find that you are having issues with the basic setup, **ASK SOMEONE**!!!  We have created a Discord server
-> ([Link to Discord](https://discord.gg/wQqm2qV)) where you
-> can dynamically ask tutors and other participants questions.  This pertains to setting up Docker as well as _every other portion of the bootcamp_.
->
-> And more broadly, this is a very good general rule of thumb to get into.  If you are struggling with something, particularly if it is technical, don't needlessly
-> waste your time thinking that "this is a stupid question, so I'm not allowed to ask".  There will be something to help you and that is
-> what collaboration is all about anyways. So do one of the following :
-> - Ask the person sitting next to you
-> - Ask that helpful person on your analysis team or working group
-> - Ask a Skype channel, Mattermost or Discord chat
-> - Ask a mailing list
->
-> When you are done, just be sure to say _"thank you"_. #teamworkmakesthedreamwork
+  > ## If something doesn't work
+  > Docker is a standard industry tool.  The directions above should "just work".  That said, if you spend **one hour** working
+  > by yourself and still find that you are having issues with the basic setup, **ASK SOMEONE**!!!  We have created a Discord server
+  > ([Link to Discord](https://discord.gg/wQqm2qV)) where you
+  > can dynamically ask tutors and other participants questions.  This pertains to setting up Docker as well as _every other portion of the   bootcamp_.
+  >
+  > And more broadly, this is a very good general rule of thumb to get into.  If you are struggling with something, particularly if it is   technical, don't needlessly
+  > waste your time thinking that "this is a stupid question, so I'm not allowed to ask".  There will be something to help you and that is
+  > what collaboration is all about anyways. So do one of the following :
+  > - Ask the person sitting next to you
+  > - Ask that helpful person on your analysis team or working group
+  > - Ask a Skype channel, Mattermost or Discord chat
+  > - Ask a mailing list
+  >
+  > When you are done, just be sure to say _"thank you"_. #teamworkmakesthedreamwork
 {: .callout}
 
 
@@ -129,7 +154,7 @@ Start by downloading the Docker image for the release you want using the `docker
 Docker behind the scenes (Again, more details in the Docker session), so you don’t have to worry about that yourself:
 
 ```bash
-docker pull atlas/analysisbase:21.2.125
+>docker pull atlas/analysisbase:21.2.125
 ```
 
 The image should be around 4GB in size, so make sure you have the space available on your hard drive.
@@ -167,28 +192,6 @@ Configured AnalysisBase from: /usr/AnalysisBase/21.2.125/InstallArea/x86_64-cent
 [bash][atlas AnalysisBase-21.2.125]:~ > 
 ```
 
-> ## The CVMFS Way
-> One other common way to setup the analysis release is to use the [CernVM File System](https://cernvm.cern.ch/portal/filesystem)
-> which is available on nearly all clusters within the collaboration.  In this case, you use the `setupATLAS` alias command
-> to initialize the `asetup` ("_athena_(a) setup") command which is subsequently used to create the surrounding ATLAS coding environment
-> by giving you access to the precompiled base release.  This would typically look something like
-> ```
-> -bash-4.2$ setupATLAS
-> lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):
->  lsetup agis          ATLAS Grid Information System
->  lsetup asetup        (or asetup) to setup an Athena release
->  lsetup atlantis      Atlantis: event display
-> ...
-> -bash-4.2$ asetup AnalysisBase,21.2.125,here
-> Using AnalysisBase/21.2.125 [cmake] with platform x86_64-slc6-gcc62-opt
->   at /cvmfs/atlas.cern.ch/repo/sw/software/21.2
-> Test area: /afs/cern.ch/user/m/meehan/delme
-> -bash-4.2$
-> ```
-> This is achieving precisely the same goal as what we are achieving with Docker in this bootcamp.  The primary benefit is that using Docker
-> allows you to comfortably use your laptop for all of your work.  So, cluster down? (No Problem!), poor internet connection? (No Problem), ...
-> you can now work all the time!
-{: .callout}
 
 {% include links.md %}
 
