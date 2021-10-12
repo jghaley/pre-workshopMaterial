@@ -8,9 +8,9 @@ Throughout this workshop we will assuming previous knowledge in Unix, Python, C+
 
 It is not necessary for you to be an expert but it would be beneficial to have some experience and to feel comfortable working with them.
 
-> ## Prerequisite Checklist
-
-> - Unix and the Terminal :Download this file [shell-lesson-data.zip ](https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip), create a directory named "Desktop" on your home area in the UChicago Analysis Facility, and upload there the file you downloaded. Then Review and understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/shell-novice/). (Don't worry if you don't see directories like: "Aplicacions", "Download", "Movies", "Pictures", etc while going through this tutorial, you just need the "Desktop" directory that you just created.)
+> ## Pre-requisite Checklist
+>
+> - Unix and the Terminal : Download this file [shell-lesson-data.zip ](https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip),create a directory named "Desktop" on your home area in the UChicago Analysis Facility [How to submit](#how-to-submit), and upload there the file you downloaded. Then Review and  understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/shell-novice/). (Don't worry if you don't see directories  like: "Aplicacions", "Download", "Movies", "Pictures", etc while going through this tutorial, you just need the "Desktop" directory that you just  created.) 
 > - Essential C++ : Ensure you understand the concepts in the "Bare Minimum" checklist.
 > - Building Code : Know the difference between compiling and linking.
 > - Python : Review and understand the contents of the [Software Carpentry Tutorial](http://swcarpentry.github.io/python-novice-inflammation/).
@@ -128,7 +128,13 @@ will make things much more clear.  A few very nice tutorials that you should rev
 > You can use this as the "bare minimum" checklist for this bootcamp and you will be expected to be familiar with these concepts throughout the bootcamp.
 >
 {: .callout}
-
+>
+>```bash
+> scp file_to_submit <your_user_name>@login.af.uchicago.edu:/home/<your_user_name>/Desktop
+> example:
+> scp shell-lesson-data.zip joe123@login.af.uchicago.edu:/home/joe123/Desktop
+>```
+{: .callout}
 
 
 ## Python
