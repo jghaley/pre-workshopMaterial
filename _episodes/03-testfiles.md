@@ -61,7 +61,7 @@ container has been extracted and placed on the [CERNBox](https://cernbox.cern.ch
 directory that you will be using for the bootcamp. It is quite large so don't worry if it takes some time (2.4GB).
 <center>
 <font size="10">
-<a href="https://cernbox.cern.ch/index.php/s/P63wXuqszBDpycX">Link to Download File</a>
+<a href="https://cernbox.cern.ch/index.php/s/FR0cyGhtE3PNPty">Link to Download File</a>
 </font>
 </center>
 
