@@ -42,7 +42,7 @@ Be sure that you are residing within the `Bootcamp` directory and then start up 
 container from the `AnalysisBase` Docker image.
 
 ```bash
-docker run --rm -it -v $PWD:/home/atlas/Bootcamp atlas/analysisbase:21.2.125 bash
+docker run --rm -it -v $PWD:/home/atlas/Bootcamp atlas/analysisbase:21.2.189 bash
 ```
 
 This command is slightly extended from what you did previously.  It now includes this `-v $PWD:/home/atlas/Bootcamp`
