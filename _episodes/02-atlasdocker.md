@@ -154,7 +154,7 @@ Start by downloading the Docker image for the release you want using the `docker
 Docker behind the scenes (Again, more details in the Docker session), so you don’t have to worry about that yourself:
 
 ```bash
->docker pull atlas/analysisbase:21.2.125
+>docker pull atlas/analysisbase:21.2.186
 ```
 
 The image should be around 4GB in size, so make sure you have the space available on your hard drive.
@@ -162,7 +162,7 @@ The image should be around 4GB in size, so make sure you have the space availabl
 > ## Latest Release
 > These instructions will use a numbered release, which should be your default to work with.
 >
-> If you want to use the absolutely latest, bleeding edge version you can replace ```atlas/analysisbase:21.2.125```
+> If you want to use the absolutely latest, bleeding edge version you can replace ```atlas/analysisbase:21.2.186```
 > with ```atlas/analysisbase``` or ```atlas/analysisbase/latest```.  However, doing so is not recommended for this bootcamp.
 > Though some times it can be fun to live on the edge, so go ahead, try to pull the very latest ATLAS `AnalysisBase` image.
 >
@@ -174,7 +174,7 @@ Let's now test to see whether this worked.  Now that you have pulled the release
 This is done using the `docker run` command.
 
 ```bash
-docker run --rm -it atlas/analysisbase:21.2.125 bash
+docker run --rm -it atlas/analysisbase:21.2.186 bash
 ```
 This will change the look of command prompt and you should now see something similar to `[bash][atlas]:workdir >` or `[bash][atlas]:~ >` as your 
 prompt depending on where you are within the container. If you list the files in the top directory of the container, you should see one file called `release_setup.sh`.  Sourcing this file will
@@ -188,8 +188,8 @@ If this worked properly and you have setup docker correctly, then you should see
 ```bash
 [bash][atlas]:~ > source /release_setup.sh 
 Configured GCC from: /opt/lcg/gcc/8.3.0-cebb0/x86_64-centos7/bin/gcc
-Configured AnalysisBase from: /usr/AnalysisBase/21.2.125/InstallArea/x86_64-centos7-gcc8-opt
-[bash][atlas AnalysisBase-21.2.125]:~ > 
+Configured AnalysisBase from: /usr/AnalysisBase/21.2.186/InstallArea/x86_64-centos7-gcc8-opt
+[bash][atlas AnalysisBase-21.2.186]:~ > 
 ```
 
 
